@@ -136,6 +136,7 @@ function Index() {
       <div className="section-shell relative flex min-h-[calc(92vh-5rem)] items-center py-14"><div className="max-w-2xl">
         <h1 className="text-4xl font-black leading-[1.08] text-brand-deep sm:text-5xl lg:text-6xl">A vacinação da sua família em dia, com especialistas e acolhimento de verdade.</h1>
         <p className="mt-5 max-w-xl text-base leading-relaxed text-foreground/80 sm:text-lg">Cuidado com mais segurança e praticidade, sem se perder na caderneta e sem carregar ninguém pela cidade. Na clínica ou no conforto da sua casa.</p>
+        <p className="mt-6 max-w-xl text-lg font-black uppercase tracking-wide text-brand-green sm:text-xl">Todas as vacinas para cada fase da vida</p>
         <div className="mt-7"><CTA>Quero analisar minha caderneta</CTA></div>
         <p className="mt-4 max-w-xl text-xs italic text-muted-foreground">Análise sujeita à avaliação profissional. Vacinação domiciliar sujeita à disponibilidade e região de atendimento.</p>
       </div></div>
