@@ -78,9 +78,15 @@ const formFields: Array<[string, string, string, string]> = [
   ["vacina", "Vacina de interesse", "text", "Ex.: Influenza, HPV..."],
 ];
 
+const vaccineMarqueeItems = [
+  "Meningo B e ACWY", "HPV", "Herpes-Zóster", "Influenza", "Hexavalente",
+  "Pneumocócica", "Rotavírus", "Dengue", "Febre Amarela", "Varicela",
+  "Hepatite A e B", "VSR",
+];
+
 function VaccineMarquee() {
-  const items = Array.from({ length: 8 }, () => "Todas as vacinas para cada fase da vida");
-  return <div aria-hidden="true" className="overflow-hidden bg-brand-deep py-4"><div className="marquee-track flex w-max items-center">{items.map((message, index) => <span key={index} className="flex items-center text-sm font-black uppercase whitespace-nowrap"><span className="px-6 text-brand-lime">{message}</span><span className="text-primary-foreground/40">|</span></span>)}</div></div>;
+  const items = Array.from({ length: 4 }, () => vaccineMarqueeItems).flat();
+  return <div aria-hidden="true" className="overflow-hidden bg-brand-deep py-4"><div className="marquee-track flex w-max items-center">{items.map((vaccine, index) => <span key={index} className="flex items-center text-sm font-black uppercase whitespace-nowrap"><span className="px-6 text-brand-lime">{vaccine}</span><span className="text-primary-foreground/40">|</span></span>)}</div></div>;
 }
 
 function CTA({ children, href = "#formulario", dark = false }: { children: ReactNode; href?: string; dark?: boolean }) {
