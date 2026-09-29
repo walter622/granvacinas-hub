@@ -78,9 +78,15 @@ const formFields: Array<[string, string, string, string]> = [
   ["vacina", "Vacina de interesse", "text", "Ex.: Influenza, HPV..."],
 ];
 
+const vaccineMarqueeItems = [
+  "Meningo B e ACWY", "HPV", "Herpes-Zóster", "Influenza", "Hexavalente",
+  "Pneumocócica", "Rotavírus", "Dengue", "Febre Amarela", "Varicela",
+  "Hepatite A e B", "VSR",
+];
+
 function VaccineMarquee() {
-  const items = Array.from({ length: 8 }, () => "Todas as vacinas para cada fase da vida");
-  return <div aria-hidden="true" className="overflow-hidden bg-brand-deep py-4"><div className="marquee-track flex w-max items-center">{items.map((message, index) => <span key={index} className="flex items-center text-sm font-black uppercase whitespace-nowrap"><span className="px-6 text-brand-lime">{message}</span><span className="text-primary-foreground/40">|</span></span>)}</div></div>;
+  const items = Array.from({ length: 4 }, () => vaccineMarqueeItems).flat();
+  return <div aria-hidden="true" className="overflow-hidden bg-brand-deep py-4"><div className="marquee-track flex w-max items-center">{items.map((vaccine, index) => <span key={index} className="flex items-center text-sm font-black uppercase whitespace-nowrap"><span className="px-6 text-brand-lime">{vaccine}</span><span className="text-primary-foreground/40">|</span></span>)}</div></div>;
 }
 
 function CTA({ children, href = "#formulario", dark = false }: { children: ReactNode; href?: string; dark?: boolean }) {
@@ -130,6 +136,7 @@ function Index() {
       <div className="section-shell relative flex min-h-[calc(92vh-5rem)] items-center py-14"><div className="max-w-2xl">
         <h1 className="text-4xl font-black leading-[1.08] text-brand-deep sm:text-5xl lg:text-6xl">A vacinação da sua família em dia, com especialistas e acolhimento de verdade.</h1>
         <p className="mt-5 max-w-xl text-base leading-relaxed text-foreground/80 sm:text-lg">Cuidado com mais segurança e praticidade, sem se perder na caderneta e sem carregar ninguém pela cidade. Na clínica ou no conforto da sua casa.</p>
+        <p className="mt-6 max-w-xl text-lg font-black uppercase tracking-wide text-brand-green sm:text-xl">Todas as vacinas para cada fase da vida</p>
         <div className="mt-7"><CTA>Quero analisar minha caderneta</CTA></div>
         <p className="mt-4 max-w-xl text-xs italic text-muted-foreground">Análise sujeita à avaliação profissional. Vacinação domiciliar sujeita à disponibilidade e região de atendimento.</p>
       </div></div>
