@@ -14,7 +14,6 @@ import logoAsset from "@/assets/gran-vacinas-logo.svg.asset.json";
 import dosesAsset from "@/assets/gran-vacinas-doses.webp.asset.json";
 import teamAsset from "@/assets/gran-vacinas-equipe.webp.asset.json";
 import facadeSideAsset from "@/assets/gran-vacinas-fachada-lateral.webp.asset.json";
-import facadeAsset from "@/assets/gran-vacinas-fachada.webp.asset.json";
 import entranceAsset from "@/assets/gran-vacinas-entrada.webp.asset.json";
 
 const WHATSAPP_NUMBER = "5511XXXXXXXX";
